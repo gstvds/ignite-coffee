@@ -20,9 +20,4 @@ export const defaultTheme = {
     background: '#fafafa',
     white: '#ffffff',
   },
-
-  fonts: {
-    baloo: 'Baloo 2',
-    roboto: 'Roboto',
-  },
 }

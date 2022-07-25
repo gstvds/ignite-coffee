@@ -10,6 +10,5 @@ export const LayoutContainer = styled.div`
 `
 export const LayoutContent = styled.div`
   width: 100%;
-  max-width: 70rem;
   margin-top: 104px;
 `
