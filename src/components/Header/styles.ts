@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   display: flex;
   position: fixed;
+  background: ${(props) => props.theme.colors.background};
 
   width: 100%;
   max-width: 70rem;
