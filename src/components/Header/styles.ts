@@ -5,14 +5,21 @@ export const HeaderContainer = styled.header`
   display: flex;
   position: fixed;
   background: ${(props) => props.theme.colors.background};
+  z-index: 100;
 
   width: 100%;
-  max-width: 70rem;
   max-height: 104px;
+  justify-content: center;
 
   padding: 2rem;
-  align-items: center;
-  justify-content: space-between;
+
+  > div {
+    width: 100%;
+    max-width: 70rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   nav {
     display: flex;
