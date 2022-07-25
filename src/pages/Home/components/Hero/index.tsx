@@ -2,7 +2,7 @@ import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 
 import { HeroContainer, ItemIconContainer, ItemsContainer } from './styles'
 
-import heroImage from '../../../assets/hero.png'
+import heroImage from '../../../../assets/hero.png'
 
 export function Hero() {
   return (
