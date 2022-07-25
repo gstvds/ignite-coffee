@@ -1,11 +1,11 @@
 import { MapPin } from 'phosphor-react'
-import { Input } from '../../components/Input'
+
+import { AddressForm } from './components/AddressForm'
 import {
   AddressHeader,
   AddressCard,
   CheckoutContainer,
   CheckoutContent,
-  InputRow,
 } from './styles'
 
 export function Checkout() {
@@ -22,19 +22,7 @@ export function Checkout() {
                 <span>Infome o endereço onde deseja receber o pedido</span>
               </div>
             </AddressHeader>
-            <form>
-              <Input placeholder="CEP" />
-              <Input placeholder="Rua" />
-              <InputRow>
-                <Input placeholder="Número" inputSize="medium" />
-                <Input placeholder="Complemento" optional />
-              </InputRow>
-              <InputRow>
-                <Input placeholder="Bairro" inputSize="medium" />
-                <Input placeholder="Cidade" />
-                <Input placeholder="UF" inputSize="small" />
-              </InputRow>
-            </form>
+            <AddressForm />
           </AddressCard>
         </div>
         <div>

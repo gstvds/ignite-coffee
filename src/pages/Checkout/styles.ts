@@ -35,12 +35,6 @@ const BaseCard = styled.div`
 
 export const AddressCard = styled(BaseCard)`
   min-width: 40rem;
-  form {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
 `
 
 export const AddressHeader = styled.div`
@@ -67,10 +61,4 @@ export const AddressHeader = styled.div`
     font-size: 0.875rem;
     color: ${(props) => props.theme.colors['base-text']};
   }
-`
-
-export const InputRow = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 `
