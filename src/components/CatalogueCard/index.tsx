@@ -18,7 +18,7 @@ interface CardProps {
   price: number
 }
 
-export function Card({
+export function CatalogueCard({
   imageSource,
   tags,
   title,

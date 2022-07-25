@@ -6,7 +6,7 @@ import {
   HomeContent,
 } from './styles'
 import { Hero } from './components/Hero'
-import { Card } from '../../components/Card'
+import { CatalogueCard } from '../../components/CatalogueCard'
 
 import coffees from '../../utils/coffees.json'
 import * as images from '../../utils/images'
@@ -21,7 +21,7 @@ export function Home() {
           <h2>Nossos cafés</h2>
           <Coffees>
             {coffees.map((coffee) => (
-              <Card
+              <CatalogueCard
                 key={coffee.id}
                 tags={coffee.tags}
                 price={coffee.price}
