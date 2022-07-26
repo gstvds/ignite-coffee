@@ -1,4 +1,4 @@
-import { CartCoffeeCard } from '../../components/CartCoffeeCard'
+import { CartCoffeeCard } from './CartCoffeeCard'
 
 import { AddressForm } from './components/AddressForm'
 import {

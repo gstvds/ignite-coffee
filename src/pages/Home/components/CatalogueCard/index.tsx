@@ -1,5 +1,5 @@
 import { ShoppingCart } from 'phosphor-react'
-import { QuantitySelect } from '../QuantitySelect'
+import { QuantitySelect } from '../../../../components/QuantitySelect'
 import {
   ActionsContainer,
   AddToCardButton,

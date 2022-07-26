@@ -1,5 +1,5 @@
 import { Trash } from 'phosphor-react'
-import { QuantitySelect } from '../QuantitySelect'
+import { QuantitySelect } from '../../../components/QuantitySelect'
 import {
   CartCoffeeContainer,
   DetailsContainer,

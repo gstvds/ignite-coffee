@@ -6,7 +6,7 @@ import {
   HomeContent,
 } from './styles'
 import { Hero } from './components/Hero'
-import { CatalogueCard } from '../../components/CatalogueCard'
+import { CatalogueCard } from './components/CatalogueCard'
 
 import coffees from '../../utils/coffees.json'
 import * as images from '../../utils/images'
