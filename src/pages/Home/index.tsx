@@ -5,6 +5,7 @@ import {
   HomeContainer,
   HomeContent,
 } from './styles'
+
 import { Hero } from './components/Hero'
 import { CatalogueCard } from './components/CatalogueCard'
 

@@ -1,4 +1,5 @@
 import { MapPin, Timer } from 'phosphor-react'
+
 import {
   DeliveryInformationContainer,
   DeliveryInformationContent,

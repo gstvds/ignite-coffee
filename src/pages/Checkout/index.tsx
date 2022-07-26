@@ -1,8 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 
-import { CartCoffeeCard } from './CartCoffeeCard'
-
-import { AddressForm } from './components/AddressForm'
 import {
   DeliveryHeader,
   DeliveryCard,
@@ -20,9 +17,11 @@ import {
   CurrencyIcon,
   PaymentMethodContainer,
 } from './styles'
+import { AddressForm } from './components/AddressForm'
+import { PaymentMethod } from './components/PaymentMethod'
+import { CartCoffeeCard } from './components/CartCoffeeCard'
 
 import * as images from '../../utils/images'
-import { PaymentMethod } from './components/PaymentMethod'
 
 export function Checkout() {
   const navigate = useNavigate()
