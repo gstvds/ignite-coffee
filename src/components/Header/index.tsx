@@ -1,9 +1,9 @@
+import { NavLink } from 'react-router-dom'
 import { MapPin, ShoppingCart } from 'phosphor-react'
 
 import { HeaderContainer, Location, Cart, Counter } from './styles'
 
 import coffeeLogo from '../../assets/logo.svg'
-import { NavLink } from 'react-router-dom'
 
 export function Header() {
   return (

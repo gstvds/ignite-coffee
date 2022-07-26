@@ -1,4 +1,5 @@
 import { Minus, Plus } from 'phosphor-react'
+
 import { QuantityContainer } from './styles'
 
 export function QuantitySelect() {
