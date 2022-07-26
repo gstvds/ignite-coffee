@@ -1,11 +1,12 @@
 import { Trash } from 'phosphor-react'
-import { QuantitySelect } from '../../../components/QuantitySelect'
 import {
   CartCoffeeContainer,
   DetailsContainer,
   InfoContainer,
   RemoveButton,
 } from './styles'
+
+import { QuantitySelect } from '../../../../components/QuantitySelect'
 
 interface CartCoffeeCardProps {
   onIncrease?: () => void
