@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { ShoppingCart } from 'phosphor-react'
-import { QuantitySelect } from '../../../../components/QuantitySelect'
+
 import {
   ActionsContainer,
   AddToCardButton,
@@ -10,7 +11,13 @@ import {
   TagContainer,
 } from './styles'
 
+import { QuantitySelect } from '../../../../components/QuantitySelect'
+import { useCart } from '../../../../contexts/CartContext'
+
+import * as images from '../../../../utils/images'
+
 interface CardProps {
+  id: string
   title: string
   imageSource: string
   tags: string[]
@@ -19,15 +26,35 @@ interface CardProps {
 }
 
 export function CatalogueCard({
+  id,
   imageSource,
   tags,
   title,
   description,
   price,
 }: CardProps) {
+  const { addToCart } = useCart()
+  // TODO: Get quantity from cart
+  const [quantity, setQuantity] = useState(0)
+
+  function handleAddCoffee() {
+    setQuantity((quantity) => (quantity += 1))
+  }
+
+  function handleRemoveCoffee() {
+    if (quantity <= 0) return
+    setQuantity((quantity) => (quantity -= 1))
+  }
+
+  function handleAddToCart() {
+    if (quantity > 0) {
+      addToCart({ id, description, imageSource, price, quantity, tags, title })
+    }
+  }
+
   return (
     <CardContainer>
-      <img src={imageSource} alt="" />
+      <img src={images[imageSource as keyof typeof images]} alt="" />
       <TagContainer>
         {tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
@@ -41,8 +68,12 @@ export function CatalogueCard({
           <h2>{price.toFixed(2).replace('.', ',')}</h2>
         </PriceContainer>
         <ActionsContainer>
-          <QuantitySelect />
-          <AddToCardButton>
+          <QuantitySelect
+            quantity={quantity}
+            onAdd={handleAddCoffee}
+            onRemove={handleRemoveCoffee}
+          />
+          <AddToCardButton onClick={handleAddToCart}>
             <ShoppingCart size={22} weight="fill" />
           </AddToCardButton>
         </ActionsContainer>

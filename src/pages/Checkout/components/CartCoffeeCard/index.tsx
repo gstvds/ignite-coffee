@@ -7,6 +7,7 @@ import {
 } from './styles'
 
 import { QuantitySelect } from '../../../../components/QuantitySelect'
+import { useCart } from '../../../../contexts/CartContext'
 
 interface CartCoffeeCardProps {
   onIncrease?: () => void
@@ -15,13 +16,31 @@ interface CartCoffeeCardProps {
   imageSource: string
   title: string
   price: number
+  quantity: number
+  id: string
 }
 
 export function CartCoffeeCard({
+  id,
   title,
   imageSource,
   price,
+  quantity,
 }: CartCoffeeCardProps) {
+  const { increaseCoffee, removeCoffee, removeFromCart } = useCart()
+
+  function handleRemoveCoffee() {
+    removeCoffee(id)
+  }
+
+  function handleAddCoffee() {
+    increaseCoffee(id)
+  }
+
+  function handleRemoveCoffeeFromCart() {
+    removeFromCart(id)
+  }
+
   return (
     <CartCoffeeContainer>
       <InfoContainer>
@@ -29,8 +48,12 @@ export function CartCoffeeCard({
         <DetailsContainer>
           <span>{title}</span>
           <div>
-            <QuantitySelect />
-            <RemoveButton>
+            <QuantitySelect
+              quantity={quantity}
+              onRemove={handleRemoveCoffee}
+              onAdd={handleAddCoffee}
+            />
+            <RemoveButton onClick={handleRemoveCoffeeFromCart}>
               <Trash size={16} />
               Remover
             </RemoveButton>

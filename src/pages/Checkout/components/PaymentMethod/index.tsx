@@ -1,11 +1,14 @@
 import { CreditCard, Bank, Money } from 'phosphor-react'
+
 import { PaymentContainer } from './styles'
+
+import { PaymentMethodTypes } from '../../../../reducers/cart/types'
 
 interface PaymentMethodProps {
   title: string
   onSelect: () => void
   selected?: boolean
-  type?: 'credit_card' | 'debit_card' | 'money'
+  type?: PaymentMethodTypes
 }
 
 export function PaymentMethod({

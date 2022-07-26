@@ -53,8 +53,14 @@ export const DeliveryCard = styled(BaseCard)`
 `
 
 export const CoffeeCard = styled(BaseCard)`
+  min-width: 20rem;
   max-width: 28rem;
   border-radius: 6px 44px;
+
+  > h1 {
+    font-size: 1.5rem;
+    width: 28rem;
+  }
 `
 
 export const DeliveryHeader = styled.div`

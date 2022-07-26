@@ -23,16 +23,16 @@ export const PaymentContainer = styled.button<PaymentContainerProps>`
 
   cursor: pointer;
 
+  &:focus {
+    box-shadow: 0 0 0 2px ${(props) => props.theme.colors.purple};
+    outline: 0;
+  }
+
   ${(props) =>
     !props.selected &&
     css`
       &:hover {
         background: ${(props) => props.theme.colors['base-hover']};
-      }
-
-      &:focus {
-        box-shadow: none;
-        outline: 0;
       }
     `}
 
