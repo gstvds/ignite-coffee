@@ -41,14 +41,17 @@ export const InputContainer = styled.div<InputContainerProps>`
 export const CustomInput = styled.input`
   color: ${(props) => props.theme.colors['base-text']};
   font-size: 0.875rem;
-  box-shadow: none;
-  outline: 0;
   background: transparent;
   border: 0;
   width: 100%;
 
   &::placeholder {
     color: ${(props) => props.theme.colors['base-label']};
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
   }
 `
 

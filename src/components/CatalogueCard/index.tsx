@@ -1,11 +1,11 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
+import { QuantitySelect } from '../QuantitySelect'
 import {
   ActionsContainer,
   AddToCardButton,
   CardContainer,
   CardFooter,
   PriceContainer,
-  QuantityContainer,
   Tag,
   TagContainer,
 } from './styles'
@@ -41,11 +41,7 @@ export function CatalogueCard({
           <h2>{price.toFixed(2).replace('.', ',')}</h2>
         </PriceContainer>
         <ActionsContainer>
-          <QuantityContainer>
-            <Minus size={14} weight="bold" />
-            <span>1</span>
-            <Plus size={14} weight="bold" />
-          </QuantityContainer>
+          <QuantitySelect />
           <AddToCardButton>
             <ShoppingCart size={22} weight="fill" />
           </AddToCardButton>
