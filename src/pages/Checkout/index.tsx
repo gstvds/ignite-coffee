@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom'
+
 import { CartCoffeeCard } from './CartCoffeeCard'
 
 import { AddressForm } from './components/AddressForm'
@@ -23,6 +25,12 @@ import * as images from '../../utils/images'
 import { PaymentMethod } from './components/PaymentMethod'
 
 export function Checkout() {
+  const navigate = useNavigate()
+
+  function handleCompleteOrder() {
+    navigate('/success')
+  }
+
   return (
     <CheckoutContainer>
       <CheckoutContent>
@@ -92,7 +100,9 @@ export function Checkout() {
                 <TotalPrice>R$ 33,20</TotalPrice>
               </div>
             </DescriptionContainer>
-            <ConfirmButton>Confirmar Pedido</ConfirmButton>
+            <ConfirmButton onClick={handleCompleteOrder}>
+              Confirmar Pedido
+            </ConfirmButton>
           </CoffeeCard>
         </div>
       </CheckoutContent>
