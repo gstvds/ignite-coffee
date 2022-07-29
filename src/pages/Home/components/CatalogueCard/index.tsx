@@ -15,6 +15,7 @@ import { QuantitySelect } from '../../../../components/QuantitySelect'
 import { useCart } from '../../../../contexts/CartContext'
 
 import * as images from '../../../../utils/images'
+import { toast } from 'react-toastify'
 
 interface CardProps {
   id: string
@@ -50,6 +51,9 @@ export function CatalogueCard({
     if (quantity > 0) {
       addToCart({ id, description, imageSource, price, quantity, tags, title })
     }
+    toast.success('Café adicionado no carrinho', {
+      toastId: 'added-coffee-success',
+    })
   }
 
   return (

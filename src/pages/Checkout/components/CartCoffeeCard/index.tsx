@@ -8,6 +8,7 @@ import {
 
 import { QuantitySelect } from '../../../../components/QuantitySelect'
 import { useCart } from '../../../../contexts/CartContext'
+import { toast } from 'react-toastify'
 
 interface CartCoffeeCardProps {
   onIncrease?: () => void
@@ -39,6 +40,9 @@ export function CartCoffeeCard({
 
   function handleRemoveCoffeeFromCart() {
     removeFromCart(id)
+    toast.warning('Café removido do carrinho', {
+      toastId: 'removed-coffee-warning',
+    })
   }
 
   return (
