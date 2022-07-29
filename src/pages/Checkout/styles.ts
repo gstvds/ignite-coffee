@@ -53,6 +53,7 @@ export const DeliveryCard = styled(BaseCard)`
 `
 
 export const CoffeeCard = styled(BaseCard)`
+  display: flex;
   min-width: 20rem;
   max-width: 28rem;
   border-radius: 6px 44px;

@@ -6,7 +6,15 @@ export function cartReducer(state: CartState, action: CartReducerAction) {
   switch (action.type) {
     case CartActionTypes.ADD_TO_CART: {
       return produce(state, (draft) => {
-        draft.cart.push(action.payload.newCoffee)
+        const coffeeIndex = state.cart.findIndex(
+          (coffee) => coffee.id === action.payload.newCoffee.id,
+        )
+        // If the coffee isn't already in the cart, add it.
+        if (coffeeIndex < 0) {
+          draft.cart.push(action.payload.newCoffee)
+        } else {
+          draft.cart[coffeeIndex].quantity += action.payload.newCoffee.quantity
+        }
       })
     }
     case CartActionTypes.REMOVE_FROM_CART: {

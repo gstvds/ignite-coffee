@@ -12,6 +12,10 @@ export const CartCoffeeContainer = styled.div`
     text-align: right;
     color: ${(props) => props.theme.colors['base-text']};
   }
+
+  & + & {
+    margin-top: 3rem;
+  }
 `
 
 export const InfoContainer = styled.div`
